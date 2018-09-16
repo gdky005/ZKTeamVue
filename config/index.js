@@ -10,15 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/Subscribe': {
-        target: 'http://zkteam.cc',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/Subscribe': '/Subscribe'
-        }
-      }
-    },
+    // proxyTable: {
+    //   '/Subscribe': {
+    //     target: 'http://zkteam.cc',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/Subscribe': '/Subscribe'
+    //     }
+    //   }
+    // },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

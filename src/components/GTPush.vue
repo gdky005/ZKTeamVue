@@ -3,7 +3,7 @@
     <h1>个推推送</h1>
 
     <div style="margin: 50px; text-align: center">
-      <el-input v-model="input" placeholder="请输入个推 cid"></el-input>
+      <el-input v-model="cid" placeholder="请输入个推 cid"></el-input>
       <p>
         <el-button type="primary" @click="checkCid">查询 CID</el-button>
       </p>
@@ -17,52 +17,53 @@
     name: "GTPush",
     data() {
       return {
-        input: ''
+        cid: '',
       }
     },
     methods: {
       checkCid() {
-        var that = this;
-        this.$axios.get('http://zkteam.cc/Subscribe/jsonQueryInfo/?des=80s')
-          .then(function (res) {
-            console.log(res);
-            that.$message.error('当前输入的内容是：' + res);
-            // that.resultCallBackForQuitAccount(that, res.data);
-          })
-          .catch(function (err) {
-            console.log(err);
-            that.$message.error('当前输入的内容是：' + err);
-            // that.resultCallBackForQuitAccount(that, err);
+        // 注册接口请求
+        var obj = {};
+        obj.cid = this.cid;
+        obj.that = this;
+
+        //发起请求
+        this.$store.dispatch('registerRequest', obj);
+      },
+
+
+      // 请求返回成功后的处理方式
+      resultCallBackForCheckCid(obj) {
+        let that = obj.that;
+
+        let resultData = obj.result;
+        let objs;
+
+        if (resultData.code !== 0) {
+          objs = resultData;
+          objs.message = resultData.result;
+        } else {
+          objs = obj.result;
+        }
+
+        let code = objs['code'];
+        let message = objs['message'];
+
+        console.log(code + "," + message);
+
+        if (code === 0) {
+          that.$notify({
+            title: '成功',
+            message: "消息：",
+            type: 'success'
           });
-
-
-
-        // login
-        // let account = this.userInfo.user_name;
-        // let password = this.userInfo.user_password;
-        //
-        //
-        // this.$refs.userInfo.validate((valid) => {
-        //   if (valid) {
-        //     this.loginDialogState = false;
-        //     this.innerVisible = false;
-        //
-        //     let that = this;
-        //
-        //     let obj = {};
-        //     obj.that = that;
-        //     obj.account = account;
-        //     obj.password = password;
-        //
-        //
-        //     this.$store.dispatch('login', obj);
-        //
-        //   } else {
-        //     this.$message.error('请先根据页面提示修复错误');
-        //
-        //     return true;
-        //   }
-        // });
+        } else {
+          that.$notify({
+            title: '失败',
+            message: "错误：",
+            type: 'error'
+          });
+        }
       },
     }
   }
