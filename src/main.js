@@ -10,7 +10,19 @@ import router from './router'
 import axios from 'axios';
 Vue.use(ElementUI);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+
+
+
+axios.defaults.withCredentials = true;
+
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+
+Vue.prototype.$axios=axios;
+
+
 
 /* eslint-disable no-new */
 new Vue({
