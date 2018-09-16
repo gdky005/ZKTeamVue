@@ -22,18 +22,21 @@
     },
     methods: {
       login() {
+        var that = this;
         this.$axios.get('http://zkteam.cc/Subscribe/jsonQueryInfo/?des=80s')
           .then(function (res) {
             console.log(res);
+            that.$message.error('当前输入的内容是：' + res);
             // that.resultCallBackForQuitAccount(that, res.data);
           })
           .catch(function (err) {
             console.log(err);
+            that.$message.error('当前输入的内容是：' + err);
             // that.resultCallBackForQuitAccount(that, err);
           });
 
 
-        this.$message.error('当前输入的内容是：' + this.input);
+
         // login
         // let account = this.userInfo.user_name;
         // let password = this.userInfo.user_password;
