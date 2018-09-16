@@ -3,9 +3,9 @@
     <h1>个推推送</h1>
 
     <div style="margin: 50px; text-align: center">
-      <el-input v-model="input" placeholder="请输入内容"></el-input>
+      <el-input v-model="input" placeholder="请输入个推 cid"></el-input>
       <p>
-        <el-button type="primary" @click="login">查询 CID</el-button>
+        <el-button type="primary" @click="checkCid">查询 CID</el-button>
       </p>
 
     </div>
@@ -21,7 +21,7 @@
       }
     },
     methods: {
-      login() {
+      checkCid() {
         var that = this;
         this.$axios.get('http://zkteam.cc/Subscribe/jsonQueryInfo/?des=80s')
           .then(function (res) {
