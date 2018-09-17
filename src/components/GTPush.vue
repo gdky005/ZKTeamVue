@@ -4,11 +4,9 @@
 
     <div style="margin: 50px; text-align: center">
 
-      <p class="a">Hello!</p>
-
       <el-input v-model="cid" placeholder="请输入个推 cid"></el-input>
       <p>
-        <el-button type="primary" @click="checkCid">查询 CID</el-button>
+        <el-button type="primary" @click="checkCid">查询 CID 是否离线</el-button>
       </p>
 
       <p style="text-align: left">
@@ -38,7 +36,7 @@
     data() {
       return {
         resultStatus: false,
-        cid: '4,5,6,7,9,9',
+        cid: '',
         data: [{
           'result': '',
           'taskId': '',
@@ -80,7 +78,7 @@
         } else  {
           this.$notify({
                 title: '失败',
-                message: "请求错误",
+                message: "请输入 cid 或者请求错误！",
                 type: 'error'
               });
         }
