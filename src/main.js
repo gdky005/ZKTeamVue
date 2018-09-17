@@ -6,6 +6,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from './App'
 import router from './router'
 
+import $ from 'jquery'
+
 // store.js
 import Vuex from 'vuex';
 // 引入 axios
@@ -20,7 +22,6 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 Vue.prototype.$axios = axios;
 
-
 // https://www.cnblogs.com/wisewrong/p/6402183.html
 const store = new Vuex.Store({
   // 定义状态
@@ -34,16 +35,39 @@ const store = new Vuex.Store({
       let cid = obj.cid;
       console.log("输入的 cid 是：" + cid);
 
-      axios.get('http://zkteam.cc/Subscribe/jsonQueryInfo/?des=80s')
-        .then(function (res) {
+      let url = 'http://192.168.17.16:8888/query.php?cid=' + cid;
+      // let url = 'http://zkteam.cc/Subscribe/jsonQueryInfo/?des=80s';
+
+      // http://192.168.17.16:8888/query.php?cid=1323
+      // axios.get('http://zkteam.cc/Subscribe/jsonQueryInfo/?des=80s')
+      // axios.get('/api/query.php?cid=' + cid)
+      //   .then(function (res) {
+      //     console.log(res);
+      //     obj.result = res.data;
+      //     that.resultCallBackForCheckCid(obj);
+      //   })
+      //   .catch(function (err) {
+      //     console.log(err);
+      //     that.resultCallBackForCheckCid(err);
+      //   });
+
+      $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'jsonp',
+        jsonpCallback:'cidResult',
+        success: function (res) {
           console.log(res);
-          obj.result = res.data;
+          obj.result = res;
           that.resultCallBackForCheckCid(obj);
-        })
-        .catch(function (err) {
-          console.log(err);
-          that.resultCallBackForCheckCid(err);
-        });
+        },
+        error: function (res) {
+          console.log(res);
+          obj.result = res;
+          that.resultCallBackForCheckCid(obj);
+        },
+      })
+
     }
 
   }
