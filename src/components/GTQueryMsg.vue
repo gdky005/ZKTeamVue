@@ -18,49 +18,25 @@
           style="width: 100%"
           :row-class-name="tableRowClassName">
 
-
-          <!--// msgSendTime: "",-->
-          <!--//   gtHttpState: "",-->
-          <!--//   gtCode: "",-->
-          <!--//   gtMsgState: "",-->
-          <!--//   unknown: "",-->
-          <!--//   gtCid: "",-->
-          <!--//   title: "",-->
-          <!--//   msg: "",-->
-          <!--//   content: "",-->
-          <!--//   platform: "",-->
-          <!--//   schemeUrl: "",-->
-          <!--//   page: "",-->
-          <!--//   ttl: "",-->
-          <!--//   pushMsgType: "",-->
-          <!--//   uniqId: "",-->
-          <!--//   pushChannel: "",-->
-          <!--//   taskid:"",-->
-          <!--//   pushCallBack: "",-->
-          <!--//   unknownMsg: "",-->
-          <!--//   unknownMsg: "",-->
-
-
-
           <el-table-column prop="msgSendTime" label="发送时间"></el-table-column>
-          <el-table-column prop="gtHttpState" label="gtHttpState"></el-table-column>
+          <!--<el-table-column prop="gtHttpState" label="gtHttpState"></el-table-column>-->
           <el-table-column prop="gtCode" label="gtCode"></el-table-column>
           <el-table-column prop="gtMsgState" label="gtMsgState"></el-table-column>
-          <el-table-column prop="unknown" label="unknown"></el-table-column>
+          <!--<el-table-column prop="unknown" label="unknown"></el-table-column>-->
           <el-table-column prop="gtCid" label="gtCid"></el-table-column>
           <el-table-column prop="title" label="title"></el-table-column>
-          <el-table-column prop="msg" label="msg"></el-table-column>
+          <!--<el-table-column prop="msg" label="msg"></el-table-column>-->
           <el-table-column prop="content" label="content"></el-table-column>
-          <el-table-column prop="platform" label="platform"></el-table-column>
+          <!--<el-table-column prop="platform" label="platform"></el-table-column>-->
           <el-table-column prop="schemeUrl" label="schemeUrl"></el-table-column>
-          <el-table-column prop="page" label="page"></el-table-column>
+          <!--<el-table-column prop="page" label="page"></el-table-column>-->
           <el-table-column prop="ttl" label="ttl"></el-table-column>
           <el-table-column prop="pushMsgType" label="pushMsgType"></el-table-column>
           <el-table-column prop="uniqId" label="uniqId"></el-table-column>
           <el-table-column prop="pushChannel" label="pushChannel"></el-table-column>
           <el-table-column prop="taskid" label="taskid"></el-table-column>
           <el-table-column prop="pushCallBack" label="pushCallBack"></el-table-column>
-          <el-table-column prop="unknownMsg" label="unknownMsg"></el-table-column>
+          <!--<el-table-column prop="unknownMsg" label="unknownMsg"></el-table-column>-->
           <el-table-column prop="pushMsgTime" label="pushMsgTime"></el-table-column>
 
 
