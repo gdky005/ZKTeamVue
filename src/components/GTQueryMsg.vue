@@ -18,20 +18,43 @@
           style="width: 100%"
           :row-class-name="tableRowClassName">
 
-          <el-table-column prop="msgSendTime" label="发送时间"></el-table-column>
-          <el-table-column prop="gtCode" label="gtCode"></el-table-column>
-          <el-table-column prop="gtMsgState" label="gtMsgState"></el-table-column>
-          <el-table-column prop="gtCid" label="gtCid"></el-table-column>
-          <el-table-column prop="title" label="title"></el-table-column>
-          <el-table-column prop="content" label="content"></el-table-column>
-          <el-table-column prop="schemeUrl" label="schemeUrl"></el-table-column>
-          <el-table-column prop="ttl" label="ttl"></el-table-column>
-          <el-table-column prop="pushMsgType" label="pushMsgType"></el-table-column>
-          <el-table-column prop="uniqId" label="uniqId"></el-table-column>
-          <el-table-column prop="pushChannel" label="pushChannel"></el-table-column>
-          <el-table-column prop="taskid" label="taskid"></el-table-column>
-          <el-table-column prop="pushCallBack" label="pushCallBack"></el-table-column>
-          <el-table-column prop="pushMsgTime" label="pushMsgTime"></el-table-column>
+          <el-table-column prop="msgSendTime" label="发送时间" width="130px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="gtCode" label="gtCode" width="80px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="gtMsgState" label="gtMsgState" width="100px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column label="cids" width="130px">
+            <template slot-scope="scope">
+              <el-popover
+                placement="right"
+                trigger="click">
+                <!--参考：https://segmentfault.com/q/1010000012511902-->
+
+                <el-table :data="scope.row.cids">
+                  <el-table-column width="600" property="cid" label="本次推送相关 Cid"></el-table-column>
+                </el-table>
+                <el-button slot="reference" size="small" type="primary" plain>获取所有 Cid</el-button>
+              </el-popover>
+            </template>
+          </el-table-column>
+          <el-table-column prop="title" label="title" width="130px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="content" label="content" width="130px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="schemeUrl" label="schemeUrl" width="150px">
+            <template slot-scope="scope">
+              <el-popover
+                trigger="click">
+                <!--参考：https://segmentfault.com/q/1010000012511902-->
+                {{ scope.row.schemeUrl }}
+
+                <el-button slot="reference" size="small" type="primary" plain>获取 schemeUrl</el-button>
+              </el-popover>
+            </template>
+          </el-table-column>
+          <el-table-column prop="ttl" label="ttl" width="130px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="pushMsgType" label="pushMsgType" width="130px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="uniqId" label="uniqId" width="300px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="pushChannel" label="pushChannel" width="130px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="taskid" label="taskid" width="300px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="pushCallBack" label="pushCallBack" width="200px" align="center" show-overflow-tooltip></el-table-column>
+          <el-table-column prop="pushMsgTime" label="pushMsgTime" width="130px" align="center" show-overflow-tooltip></el-table-column>
 
 
         </el-table>
@@ -80,7 +103,6 @@
       // 请求返回成功后的处理方式
       resultCallBackForCheckCid(res) {
         // this.data = res;
-
         if (res.length > 0) {
           this.$notify({
             title: '成功',
@@ -164,7 +186,17 @@
             obj["unknownMsg"] =  d[18];
             obj["pushMsgTime"] =  d[19];
 
-            console.log("当前 data: " + obj["gtCid"]);
+            // 处理 cids
+            let cids = d[4].split(',');
+            let cidObjs = [];
+
+            for (let i = 0; i < cids.length; i++) {
+              let cidObj = {};
+              cidObj["cid"] = (i + 1) + ". " +cids[i];
+              cidObjs.push(cidObj)
+            }
+            obj["cids"] = cidObjs;
+            // console.log("当前 data: " + obj["gtCid"]);
             this.data.push(obj);
           }
 

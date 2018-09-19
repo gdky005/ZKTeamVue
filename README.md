@@ -28,5 +28,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 2. npm install axios --save
 
 
+## eleme  组件
+1. 参考：https://segmentfault.com/q/1010000012511902
 
 
