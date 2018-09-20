@@ -1,12 +1,26 @@
 <template>
   <div>
-    <h2>RD 环境查询个推当天发送消息</h2>
+    <div style="margin-top: 60px;text-align: center;">
+
+      <h1>个推推送</h1>
+
+      <el-dropdown @command="handleCommand">
+        <el-button size="medium" split-button round type="warning" style="width: 120px">
+          {{ env }}<i class="el-icon-arrow-down el-icon--right"></i>
+        </el-button>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="0">测试环境</el-dropdown-item>
+          <el-dropdown-item command="1">ST 环境</el-dropdown-item>
+          <el-dropdown-item command="2">正式环境</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+    </div>
 
     <div style="margin: 50px; text-align: center">
 
       <el-input v-model="msg" placeholder="请输入个推 推送消息内容"></el-input>
       <p>
-        <el-button type="primary" @click="checkCid">查询消息</el-button>
+        <el-button type="primary" icon="el-icon-search" @click="checkCid">查询消息</el-button>
       </p>
 
       <p style="text-align: left">
@@ -69,6 +83,13 @@
     name: "GTQueryMsg",
     data() {
       return {
+        url: 'http://192.168.17.16:8888',
+        envs: [
+          '测试环境',
+          'ST 环境',
+          '正式环境',
+        ],
+        env: '测试环境',
         resultStatus: false,
         msg: '聚美',
         data: [
@@ -78,9 +99,24 @@
       }
     },
     methods: {
-      checkCid() {
+      handleCommand(command) {
+        this.env = this.envs[command];
 
-        let url = 'http://192.168.17.16:8888/logquery.php?key=' + this.msg;
+        if (command === '0') {
+          this.url = 'http://192.168.17.16:8888';
+        } else {
+          this.url = 'http://bjtest-push.gateway.int.jumei.com';
+        }
+
+        this.$message({
+          showClose: true,
+          message: '当前已经切换至： ' + this.env,
+          type: 'warning'
+        });
+      },
+
+      checkCid() {
+        let url = this.url + '/logquery.php?key=' + this.msg;
 
         var that = this;
         $.ajax({
@@ -204,7 +240,7 @@
         } else {
           this.$notify({
             title: '失败',
-            message: "请输入 cid 或者请求错误！",
+            message: "请输入 查询内容 或者请求错误！",
             type: 'error'
           });
         }

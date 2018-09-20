@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div tyle="margin-top: 60px;text-align: center;">
 
 
     <el-container style="height: 1000px;">
-      <el-aside width="200px">
+      <el-aside width="300px">
         <h1>客户端架构组</h1>
 
 
@@ -11,49 +11,32 @@
           <el-button size="mini" type="primary" round>进程管理服务</el-button>
         </a>
 
-        <p>..............................</p>
+        <p>............................................................</p>
         <p>即将添加更多服务</p>
-        <p>..............................</p>
+        <p>............................................................</p>
         <div style="font-size: 4px; padding: 30px">
           <p>温馨提醒: </p>
-          更多功能需要你来提哦，提出不一定做，但是不提一定不做。
-          <p>哈哈哈</p>
+          更多功能需要你来提哦，提出不一定做，但是不提一定不做。哈哈哈
         </div>
-        <p>..............................</p>
+        <p>............................................................</p>
+        请优先配置本地Host:
+        <p style="font-size: 1px; padding: 0px"><br>192.168.20.135 bjtest-push.gateway.int.jumei.com</p>
+        <p>............................................................</p>
 
       </el-aside>
-      <el-container>
 
-
-        <el-main>
-
-
-          <!--<h7>【更多功能需要你来提哦，提出不一定做，但是不提一定不做。哈哈哈】</h7>-->
-
-
-          <h2>个推推送 辅助工具</h2>
-
-          <p>
-            <router-link to="GtPush">
-              <el-button type="primary" @click="checkCid">查询 CID 是否离线</el-button>
-            </router-link>
-          </p>
-          <p>
-            <router-link to="GTQueryMsg">
-              <el-button type="primary" @click="checkCid">查询 个推 消息</el-button>
-            </router-link>
-          </p>
-        </el-main>
-      </el-container>
+      <el-main>
+        <router-view />
+      </el-main>
     </el-container>
-
-
   </div>
 </template>
 
 <script>
+  import Home from "./Home";
   export default {
     name: "Index",
+    components: {Home},
     data() {
       return {
         resultStatus: false,
@@ -86,14 +69,14 @@
   }
 
   .el-main, .el-container {
-    background-color: #E9EEF3;
-    color: #333;
+    /*background-color: #E9EEF3;*/
+    /*color: #333;*/
     /*text-align: center;*/
     /*line-height: 160px;*/
   }
 
   /*body > .el-container {*/
-    /*!*margin-bottom: 40px;*!*/
+  /*!*margin-bottom: 40px;*!*/
   /*}*/
 
   /*.el-container:nth-child(5) .el-aside,*/

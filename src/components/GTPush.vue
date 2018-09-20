@@ -42,7 +42,7 @@
       <p>
 
 
-        <el-button type="primary" @click="checkCid">查询 CID 是否离线</el-button>
+        <el-button type="primary" icon="el-icon-search" @click="checkCid">查询 CID 是否离线</el-button>
       </p>
 
       <p style="text-align: left">
