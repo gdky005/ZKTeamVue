@@ -1,11 +1,47 @@
 <template>
   <div>
-    <h1>个推推送</h1>
+    <div style="margin-top: 60px;text-align: center;">
+
+      <h1>个推推送</h1>
+
+      <el-dropdown @command="handleCommand">
+        <el-button size="medium" split-button round type="warning" style="width: 120px">
+          {{ env }}<i class="el-icon-arrow-down el-icon--right"></i>
+        </el-button>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="0">测试环境</el-dropdown-item>
+          <el-dropdown-item command="1">ST 环境</el-dropdown-item>
+          <el-dropdown-item command="2">正式环境</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+
+     <!--<span style="text-align: center; font-size: 50px">个推推送</span>-->
+
+      <!--<el-dropdown @command="handleCommand">-->
+        <!--<el-button size="medium" split-button round type="warning" style="width: 120px">-->
+          <!--{{ env }}<i class="el-icon-arrow-down el-icon&#45;&#45;right"></i>-->
+        <!--</el-button>-->
+        <!--<el-dropdown-menu slot="dropdown">-->
+          <!--<el-dropdown-item command="0">测试环境</el-dropdown-item>-->
+          <!--<el-dropdown-item command="1">ST 环境</el-dropdown-item>-->
+          <!--<el-dropdown-item command="2">正式环境</el-dropdown-item>-->
+        <!--</el-dropdown-menu>-->
+      <!--</el-dropdown>-->
+
+
+
+
+
+
+
+    </div>
 
     <div style="margin: 50px; text-align: center">
 
-      <el-input v-model="cid" placeholder="请输入个推 cid"></el-input>
+      <el-input v-model="cid" placeholder="请输入个推 cid" clearable></el-input>
       <p>
+
+
         <el-button type="primary" @click="checkCid">查询 CID 是否离线</el-button>
       </p>
 
@@ -35,8 +71,15 @@
     name: "GTPush",
     data() {
       return {
+        url: 'http://192.168.17.16:8888',
+        envs: [
+          '测试环境',
+          'ST 环境',
+          '正式环境',
+        ],
+        env: '测试环境',
         resultStatus: false,
-        cid: '',
+        cid: 'OSA-0918_J6GAWuPXoR6ARVWdYtdY14',
         data: [{
           'result': '',
           'taskId': '',
@@ -44,22 +87,43 @@
       }
     },
     methods: {
-      checkCid() {
-        // 注册接口请求
-        var obj = {};
-        obj.cid = this.cid;
-        obj.that = this;
+      handleCommand(command) {
+        this.env = this.envs[command];
 
-        //发起请求
-        this.$store.dispatch('registerRequest', obj);
+        if (command === '0') {
+          this.url = 'http://192.168.17.16:8888';
+        } else {
+          this.url = 'http://bjtest-push.gateway.int.jumei.com';
+        }
+
+        this.$message({
+          showClose: true,
+          message: '当前已经切换至： ' + this.env,
+          type: 'warning'
+        });
+      },
+
+      checkCid() {
+        var that = this;
+        $.ajax({
+          url: this.url + '/query.php?cid=' + this.cid,
+          type: 'GET',
+          dataType: 'jsonp',
+          jsonpCallback:'cidResult',
+          success: function (res) {
+            console.log(res);
+            that.resultCallBackForCheckCid(res);
+          },
+          error: function (res) {
+            console.log(res);
+            that.resultCallBackForCheckCid(res);
+          },
+        })
+
       },
       // 请求返回成功后的处理方式
       resultCallBackForCheckCid(obj) {
-        let that = obj.that;
-
-        let resultData = obj.result;
-        let objs;
-
+        let resultData = obj;
         this.data = resultData;
 
         if (resultData.length > 0) {
@@ -75,15 +139,13 @@
           }
 
           this.resultStatus = true;
-        } else  {
+        } else {
           this.$notify({
-                title: '失败',
-                message: "请输入 cid 或者请求错误！",
-                type: 'error'
-              });
+            title: '失败',
+            message: "请输入 cid 或者请求错误！",
+            type: 'error'
+          });
         }
-
-
 
 
         // console.log("当前 data: " + this.data)
