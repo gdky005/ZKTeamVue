@@ -15,13 +15,13 @@
     <div>
       <el-input v-model="bj_time" placeholder="请输入时间戳">你放好</el-input>
       <el-button @click="getBJTime" type="success" size="medium">转成_北京_时间 >></el-button>
-      <el-input v-model="bj_time_success" placeholder="请输入时间戳">你放好</el-input>
+      <el-input v-model="bj_time_success" placeholder="将自动生成北京时间"></el-input>
     </div>
 
     <div>
-      <el-input v-model="unix_time" placeholder="请输入时间戳">你放好</el-input>
+      <el-input v-model="unix_time" placeholder="请输入北京时间">你放好</el-input>
       <el-button @click="getUnixTime" type="success" size="medium">转成Unix时间戳 >></el-button>
-      <el-input v-model="unix_time_success" placeholder="请输入时间戳">你放好</el-input>
+      <el-input v-model="unix_time_success" placeholder="将自动生成时间戳">你放好</el-input>
     </div>
 
 
