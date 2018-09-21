@@ -7,9 +7,18 @@
         <h1>客户端架构组</h1>
 
 
-        <a href="http://jg.int.jumei.com:9001/">
+        <p><a href="http://jg.int.jumei.com:9001/">
           <el-button size="mini" type="primary" round>进程管理服务</el-button>
-        </a>
+        </a></p>
+
+        <p><a href="http://jg.int.jumei.com:8081">
+          <el-button size="mini" type="primary" round>NodeJS 代理服务</el-button>
+        </a></p>
+        <p>
+          <a href="http://jg.int.jumei.com:8081/WQ">
+            <el-button size="mini" type="primary" round>NodeJS 代理服务 WQ</el-button>
+          </a>
+        </p>
 
         <p>............................................................</p>
         <p>即将添加更多服务</p>
@@ -26,7 +35,7 @@
       </el-aside>
 
       <el-main>
-        <router-view />
+        <router-view/>
       </el-main>
     </el-container>
   </div>
@@ -34,6 +43,7 @@
 
 <script>
   import Home from "./Home";
+
   export default {
     name: "Index",
     components: {Home},
