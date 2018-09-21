@@ -6,16 +6,17 @@
       <el-aside width="300px">
         <h1>客户端架构组</h1>
 
+        <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 50px; margin-right: 50px"/>
 
-        <p><a href="http://jg.int.jumei.com:9001/">
+        <p><a href="http://jg.int.jumei.com:9001/" target="view_window">
           <el-button size="mini" type="primary" round>进程管理服务</el-button>
         </a></p>
 
-        <p><a href="http://jg.int.jumei.com:8081">
+        <p><a href="http://jg.int.jumei.com:8081" target="view_window">
           <el-button size="mini" type="primary" round>NodeJS 代理服务</el-button>
         </a></p>
         <p>
-          <a href="http://jg.int.jumei.com:8081/WQ">
+          <a href="http://jg.int.jumei.com:8081/WQ" target="view_window">
             <el-button size="mini" type="primary" round>NodeJS 代理服务 WQ</el-button>
           </a>
         </p>
