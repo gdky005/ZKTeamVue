@@ -5,23 +5,23 @@
     <h1>时间戳</h1>
 
     <div>
-      <el-button @click="getNowTime" type="success" size="medium">现在时间戳</el-button> &nbsp;&nbsp; ======>> &nbsp;&nbsp;
-      <el-input v-model="now_time" placeholder="点击按钮生成时间戳" style="margin: 0px">你放好</el-input>
+      <el-button @click="getNowTime" type="success" size="medium" >现在时间戳</el-button> &nbsp;&nbsp; ======>> &nbsp;&nbsp;
+      <el-input v-model="now_time" placeholder="点击按钮生成时间戳" style="width: 180px;margin: 20px">你放好</el-input>
 
       <!--<p><el-input v-model="input" placeholder="请输入时间戳" style="margin: 0px">你放好</el-input></p>-->
       <!--<p><el-button type="success" size="medium">现在时间戳</el-button></p>-->
     </div>
 
     <div>
-      <el-input v-model="bj_time" placeholder="请输入时间戳">你放好</el-input>
+      <el-input v-model="bj_time" placeholder="请输入时间戳" style="width: 180px;margin: 20px">你放好</el-input>
       <el-button @click="getBJTime" type="success" size="medium">转成_北京_时间 >></el-button>
-      <el-input v-model="bj_time_success" placeholder="将自动生成北京时间"></el-input>
+      <el-input v-model="bj_time_success" placeholder="将自动生成北京时间" style="width: 180px;margin: 20px"></el-input>
     </div>
 
     <div>
-      <el-input v-model="unix_time" placeholder="请输入北京时间">你放好</el-input>
+      <el-input v-model="unix_time" placeholder="请输入北京时间" style="width: 180px;margin: 20px">你放好</el-input>
       <el-button @click="getUnixTime" type="success" size="medium">转成Unix时间戳 >></el-button>
-      <el-input v-model="unix_time_success" placeholder="将自动生成时间戳">你放好</el-input>
+      <el-input v-model="unix_time_success" placeholder="将自动生成时间戳" style="width: 180px;margin: 20px">你放好</el-input>
     </div>
 
 
@@ -156,8 +156,8 @@
 </script>
 
 <style>
-  .el-input {
-    width: 180px;
-    margin: 20px;
-  }
+  /*.el-input {*/
+    /*width: 180px;*/
+    /*margin: 20px;*/
+  /*}*/
 </style>
