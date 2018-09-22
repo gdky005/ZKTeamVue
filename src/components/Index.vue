@@ -4,19 +4,19 @@
 
     <el-container style="height: 1000px;">
       <el-aside width="300px">
-        <h1>卓客 Team</h1>
+        <h1>google 服务空间</h1>
 
         <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 50px; margin-right: 50px"/>
 
-        <p><a href="http://zkteam.cc:9001/" target="view_window">
+        <p><a href="http://www.gdky005.site:9001/" target="view_window">
           <el-button size="mini" type="primary" round>进程管理服务</el-button>
         </a></p>
 
-        <p><a href="http://zkteam.cc:8081" target="view_window">
+        <p><a href="http://www.gdky005.site:8082" target="view_window">
           <el-button size="mini" type="primary" round>NodeJS 代理服务</el-button>
         </a></p>
         <p>
-          <a href="http://zkteam.cc:8081/WQ" target="view_window">
+          <a href="http://www.gdky005.site:8082/WQ" target="view_window">
             <el-button size="mini" type="primary" round>NodeJS 代理服务 WQ</el-button>
           </a>
         </p>
