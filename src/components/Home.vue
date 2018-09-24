@@ -25,6 +25,9 @@
     <p>密码：MMMM</p>
 
     <p>XXXX 表示分配给你的端口号， MMMM 表示你的中文姓名全拼。 例如：小李 --> xiaoli</p>
+    
+
+    <p<a href="https://portal.shadowsocks.to/aff.php?aff=18267">如果以上代理没法用，请自行注册 SS，可以帮你实现跳转。</a></p>
 
     <h2>具体使用软件:</h2>
 
