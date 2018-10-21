@@ -38,22 +38,24 @@
           </a>
         </p>
 
-         <p>
-          <a href="https://www.zkteam.cc/WXMoney/setQB" target="view_window">
+        <p>
+          <a href="https://www.zkteam.cc/WXMoney/setQB?id=1&name=%E6%88%91%E7%9A%84%E9%9B%B6%E9%92%B1&money=58" target="view_window">
             <el-button size="mini" type="primary" round>设置 我的零钱</el-button>
           </a>
         </p>
 
          <p>
-          <a href="https://www.zkteam.cc/WXMoney/setLQMXPZ" target="view_window">
+          <a href="https://www.zkteam.cc/WXMoney/setLQMXPZ?id=1&name=扫码支付&money=58&startTime=1540109304418&endTime=1540209304418&startMoney=5&endMoney=12&spendState=1" target="view_window">
             <el-button size="mini" type="primary" round>设置 零钱明细</el-button>
           </a>
         </p>
+
         <p>
           <a href="https://www.zkteam.cc/WXMoney/lqmxPZ" target="view_window">
             <el-button size="mini" type="primary" round>查看 零钱明细设置</el-button>
           </a>
         </p>
+
 
 
         <p>............................................................</p>
