@@ -24,6 +24,40 @@
         <p>............................................................</p>
         <p>即将添加更多服务</p>
         <p>............................................................</p>
+
+        <p>WXQB</p>
+        <p>
+          <a href="https://www.zkteam.cc/WXMoney/qb" target="view_window">
+            <el-button size="mini" type="primary" round>我的零钱</el-button>
+          </a>
+        </p>
+
+         <p>
+          <a href="https://www.zkteam.cc/WXMoney/lqMX" target="view_window">
+            <el-button size="mini" type="primary" round>零钱明细</el-button>
+          </a>
+        </p>
+
+         <p>
+          <a href="https://www.zkteam.cc/WXMoney/setQB" target="view_window">
+            <el-button size="mini" type="primary" round>设置 我的零钱</el-button>
+          </a>
+        </p>
+
+         <p>
+          <a href="https://www.zkteam.cc/WXMoney/setLQMXPZ" target="view_window">
+            <el-button size="mini" type="primary" round>设置 零钱明细</el-button>
+          </a>
+        </p>
+        <p>
+          <a href="https://www.zkteam.cc/WXMoney/lqmxPZ" target="view_window">
+            <el-button size="mini" type="primary" round>查看 零钱明细设置</el-button>
+          </a>
+        </p>
+
+
+        <p>............................................................</p>
+
         <div style="font-size: 4px; padding: 30px">
           <p>温馨提醒: </p>
           更多功能需要你来提哦，提出不一定做，但是不提一定不做。哈哈哈
