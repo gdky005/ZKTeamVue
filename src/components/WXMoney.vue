@@ -33,69 +33,38 @@
 
         <div>
           <p>
-            <el-input placeholder="扫码支付" v-model="input3" style="width: 300px">
+            <el-input :placeholder="mx_name_default" v-model="mx_name" style="width: 300px">
               <template slot="prepend">名称</template>
             </el-input>
           </p>
 
           <p>
-            <el-input placeholder="true" v-model="input3" style="width: 300px">
+            <el-input :placeholder="mx_spend_state_default" v-model="mx_spend_state" style="width: 300px">
               <template slot="prepend">消费状态</template>
             </el-input>
           </p>
 
           <p>
-
             <!--<span class="demonstration">起始日期时刻为 12:00:00，结束日期时刻为 08:00:00</span>-->
             起止时间:&nbsp;&nbsp;
             <el-date-picker
-              v-model="value7"
+              v-model="mx_data"
               type="datetimerange"
               align="right"
-              start-placeholder="起始日期"
-              end-placeholder="结束日期"
+              :start-placeholder="mx_data_start"
+              :end-placeholder="mx_data_start"
+              value-format="timestamp" format="yyyy-MM-dd HH:mm:ss"
               :default-time="['12:00:00', '08:00:00']">
             </el-date-picker>
-
-
-
-
-            <!--起止时间：&nbsp;&nbsp;-->
-            <!--<el-input-->
-              <!--placeholder="请输入内容"-->
-              <!--suffix-icon="el-icon-date"-->
-              <!--v-model="input6">-->
-            <!--</el-input>-->
-            <!--&nbsp;&nbsp;至&nbsp;&nbsp;-->
-            <!--<el-input-->
-              <!--size="medium"-->
-              <!--placeholder="请输入内容"-->
-              <!--suffix-icon="el-icon-date"-->
-              <!--v-model="input7">-->
-            <!--</el-input>-->
           </p>
 
           <p>
             起止金额:&nbsp;&nbsp;
-            <el-input-number v-model="num3" :step="1"></el-input-number> &nbsp;&nbsp;至&nbsp;&nbsp; <el-input-number v-model="num3" :step="1"></el-input-number>
-
-
-            <!--<el-input-->
-              <!--placeholder="请输入内容"-->
-              <!--suffix-icon="el-icon-date"-->
-              <!--v-model="input6">-->
-            <!--</el-input>-->
-            <!--&nbsp;&nbsp;至&nbsp;&nbsp;-->
-            <!--<el-input-->
-              <!--size="medium"-->
-              <!--placeholder="请输入内容"-->
-              <!--suffix-icon="el-icon-date"-->
-              <!--v-model="input7">-->
-            <!--</el-input>-->
+            <el-input-number v-model="startMoney" :step="1"></el-input-number> &nbsp;&nbsp;至&nbsp;&nbsp; <el-input-number v-model="endMoney" :step="1"></el-input-number>
           </p>
 
 
-          <p><el-button type="primary">提交</el-button></p>
+          <p><el-button type="primary" @click="mxCommit">提交</el-button></p>
         </div>
       </el-tab-pane>
     </el-tabs>
@@ -112,9 +81,18 @@
       return {
         qb_name: '',
         qb_money: '',
+        mx_name: '',
+        mx_spend_state: '',
+        startMoney: 2,
+        endMoney: 10,
+        mx_data: '',
+        mx_data_start: '起始日期',
+        mx_data_end: '结束日期',
 
         qb_name_default: '我的钱包',
         qb_money_default: '58.12',
+        mx_name_default: '扫码支付',
+        mx_spend_state_default: 'true',
 
 
         num3: 5,
@@ -140,14 +118,44 @@
       },
 
       qbCommit() {
-        var name = this.qb_name;
-        var money = this.qb_money;
+        let name = this.qb_name;
+        let money = this.qb_money;
         if (name === '')
           name = this.qb_name_default;
         if (money === '')
           money = this.qb_money_default;
 
-        console.log("hello: "+ name + "," + money)
+        console.log("QB: "+ name + "," + money)
+      },
+
+      mxCommit() {
+        let startTime = '';
+        let endTime = '';
+        let startMoney = this.startMoney;
+        let endMoney = this.endMoney;
+
+        let name = this.mx_name;
+        let spendState = this.mx_spend_state;
+        let mx_data = this.mx_data;
+        if (name === '')
+          name = this.mx_name_default;
+        if (spendState === '')
+          spendState = this.mx_spend_state_default;
+
+
+        if (mx_data !== '' && mx_data !== null){
+          // let mxData = (mx_data + '').split(",");
+          startTime = mx_data[0];
+          endTime = mx_data[1];
+        }
+
+        console.log("MX: "+ name + ", "
+          + spendState + ", "
+          + startTime + ", "
+          + endTime + ", "
+          + startMoney + ", "
+          + endMoney + "。"
+        )
       },
       getNowTime() {
         var now = new Date();
