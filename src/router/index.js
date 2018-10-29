@@ -7,6 +7,7 @@ import WXMoney from '@/components/WXMoney'
 Vue.use(Router)
 
 export default new Router({
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -22,7 +23,7 @@ export default new Router({
       ],
     },
     {
-      path: '/',
+      path: '/WXMoney',
       name: 'WXMoney',
       component: WXMoney
     },

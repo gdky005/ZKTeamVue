@@ -25,6 +25,14 @@
         <p>即将添加更多服务</p>
         <p>............................................................</p>
 
+        <p>
+          <a href="https://www.zkteam.cc/#/WXMoney" target="view_window">
+            <el-button size="mini" type="primary" round>微信零钱设置</el-button>
+          </a>
+        </p>
+
+        <p>............................................................</p>
+
         <p>WXQB</p>
         <p>
           <a href="https://www.zkteam.cc/WXMoney/qb" target="view_window">
