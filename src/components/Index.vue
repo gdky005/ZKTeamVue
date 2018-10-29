@@ -6,6 +6,10 @@
       <el-aside width="300px">
         <h1>卓客 Team</h1>
 
+        <p><a href="http://zkteam.cc/#/About" target="view_window">
+          关于 Me
+        </a></p>
+
         <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 50px; margin-right: 50px"/>
 
         <p><a href="http://zkteam.cc:9001/" target="view_window">

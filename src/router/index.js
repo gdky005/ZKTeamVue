@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/Index'
 import Home from '@/components/Home'
 import WXMoney from '@/components/WXMoney'
+import About from '@/components/About'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
       name: 'WXMoney',
       component: WXMoney
     },
+    {
+      path: '/About',
+      name: 'About',
+      component: About
+    }
 
   ]
 })
