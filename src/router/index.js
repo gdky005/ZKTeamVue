@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import GtPush from '@/components/GtPush'
 import Index from '@/components/Index'
 import Home from '@/components/Home'
-import GTQueryMsg from '@/components/GTQueryMsg'
+import WXMoney from '@/components/WXMoney'
+import About from '@/components/About'
 
 Vue.use(Router)
 
 export default new Router({
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -19,19 +20,19 @@ export default new Router({
           path: '/Home',
           name: 'Home',
           component: Home
-        },
-        {
-          path: '/GtPush',
-          name: 'GtPush',
-          component: GtPush
-        },
-        {
-          path: '/GTQueryMsg',
-          name: 'GTQueryMsg',
-          component: GTQueryMsg
         }
       ],
     },
+    {
+      path: '/WXMoney',
+      name: 'WXMoney',
+      component: WXMoney
+    },
+    {
+      path: '/About',
+      name: 'About',
+      component: About
+    }
 
   ]
 })

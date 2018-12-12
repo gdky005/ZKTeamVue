@@ -20,7 +20,10 @@ Vue.config.productionTip = false;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
+var fly=require("flyio");
 Vue.prototype.$axios = axios;
+Vue.prototype.$fly = fly;
+
 
 // https://www.cnblogs.com/wisewrong/p/6402183.html
 const store = new Vuex.Store({

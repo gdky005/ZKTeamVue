@@ -32,3 +32,16 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 1. 参考：https://segmentfault.com/q/1010000012511902
 
 
+## VUE 加快访问时间
+https://www.jb51.net/article/142844.htm
+
+
+还有添加这个：
+  externals: {
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'element-ui': 'ELEMENT',
+  },
+
+### fly 网络层
+https://github.com/wendux/fly
