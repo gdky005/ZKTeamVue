@@ -105,7 +105,6 @@
         if (command === '0') {
           this.url = 'http://192.168.17.16:8888';
         } else {
-          this.url = 'http://bjtest-push.gateway.int.jumei.com';
         }
 
         this.$message({

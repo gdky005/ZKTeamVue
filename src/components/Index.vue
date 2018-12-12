@@ -8,18 +8,6 @@
 
         <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 50px; margin-right: 50px"/>
 
-        <p><a href="http://jg.int.jumei.com:9001/" target="view_window">
-          <el-button size="mini" type="primary" round>进程管理服务</el-button>
-        </a></p>
-
-        <p><a href="http://jg.int.jumei.com:8081" target="view_window">
-          <el-button size="mini" type="primary" round>NodeJS 代理服务</el-button>
-        </a></p>
-        <p>
-          <a href="http://jg.int.jumei.com:8081/WQ" target="view_window">
-            <el-button size="mini" type="primary" round>NodeJS 代理服务 WQ</el-button>
-          </a>
-        </p>
 
         <p>............................................................</p>
         <p>即将添加更多服务</p>
@@ -28,10 +16,6 @@
           <p>温馨提醒: </p>
           更多功能需要你来提哦，提出不一定做，但是不提一定不做。哈哈哈
         </div>
-        <p>............................................................</p>
-        请优先配置本地Host:
-        <p style="font-size: 1px; padding: 0px"><br>192.168.20.135 bjtest-push.gateway.int.jumei.com</p>
-        <p>............................................................</p>
 
       </el-aside>
 
