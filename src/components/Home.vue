@@ -35,10 +35,15 @@
     <hr/>
     <h1>V2ray</h1>
 
+    <div style="text-align: left; padding: 100px">
+    <h3>V2Ray：<a href="https://v2ray.com">https://v2ray.com/</a> </h3>
+    <h3>V2Ray 下载地址：<a href="https://github.com/v2ray/v2ray-core/releases">https://github.com/v2ray/v2ray-core/releases</a> </h3>
+
     <h4>1. V2Ray扫盲教程(与 SS 区别？)：<a href="http://blog.whiterabbitxyj.com/2018/08/31/V2Ray/">http://blog.whiterabbitxyj.com/2018/08/31/V2Ray/</a> </h4>
     <h4>2. V2ray github：<a href="https://github.com/Jrohy/multi-v2ray"> https://github.com/Jrohy/multi-v2ray </a> </h4>
     <h4>3. V2Ray 的web管理面板：<a href="https://www.echoteen.com/v2ray-new-webui.html"> https://www.echoteen.com/v2ray-new-webui.html </a> </h4>
     <h4>4. 从零开始：最详尽V2Ray搭建图文教程： <a href="https://www.4spaces.org/digitalocean-build-v2ray-0-1/"> https://www.4spaces.org/digitalocean-build-v2ray-0-1/ </a></h4>
+    </div>
     <hr/>
 
     <h1> Shadowsocks </h1>
