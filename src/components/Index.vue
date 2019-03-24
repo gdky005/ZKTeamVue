@@ -20,6 +20,11 @@
             <el-button size="mini" type="primary" round>NodeJS 代理服务 WQ</el-button>
           </a>
         </p>
+        <p>
+          <a href="http://www.gdky005.site:5000" target="view_window">
+            <el-button size="mini" type="primary" round>V2ray.fun</el-button>
+          </a>
+        </p>
 
         <p>............................................................</p>
         <p>即将添加更多服务</p>

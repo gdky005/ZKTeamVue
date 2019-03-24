@@ -31,7 +31,20 @@
 
     <h2>具体使用软件:</h2>
 
+
+    <hr/>
+    <h1>V2ray</h1>
+
+    <h4>1. V2Ray扫盲教程(与 SS 区别？)：<a href="http://blog.whiterabbitxyj.com/2018/08/31/V2Ray/">http://blog.whiterabbitxyj.com/2018/08/31/V2Ray/</a> </h4>
+    <h4>2. V2ray github：<a href="https://github.com/Jrohy/multi-v2ray"> https://github.com/Jrohy/multi-v2ray </a> </h4>
+    <h4>3. V2Ray 的web管理面板：<a href="https://www.echoteen.com/v2ray-new-webui.html"> https://www.echoteen.com/v2ray-new-webui.html </a> </h4>
+    <h4>4. 从零开始：最详尽V2Ray搭建图文教程： <a href="https://www.4spaces.org/digitalocean-build-v2ray-0-1/"> https://www.4spaces.org/digitalocean-build-v2ray-0-1/ </a></h4>
+    <hr/>
+
+    <h1> Shadowsocks </h1>
+
     <div style="text-align: left; padding: 100px">
+
       <p>直接使用最新的 release 软件即可</p>
 
       <h4>1. windows软件下载地址：<a href="https://github.com/shadowsocks/shadowsocks-windows/releases">https://github.com/shadowsocks/shadowsocks-windows/releases</a>
