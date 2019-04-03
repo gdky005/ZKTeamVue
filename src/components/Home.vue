@@ -1,9 +1,18 @@
 <template>
   <div style="margin-top: 60px;text-align: center;">
 
-    <h1><a href="https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md">Android常用工具类</a></h1>
 
-    <hr/>
+    <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
+
+    <h1>Android</h1>
+
+    <p><a href="https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md" target="view_window">
+      <el-button size="mini" type="primary" round>Android 常用工具类查询</el-button>
+    </a></p>
+
+
+    <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
+
 
     <h1>时间戳</h1>
 
@@ -28,7 +37,7 @@
       <el-input v-model="unix_time_success" placeholder="将自动生成时间戳" style="width: 180px;margin: 20px">你放好</el-input>
     </div>
 
-    <hr/>
+    <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
 
   </div>
 </template>
