@@ -95,7 +95,7 @@
         data: [
           // {"name":"Oppo9-通知-离线2", "content":"汉子"},
           // {"name":"Oppo9-通知-离线22", "content":"女子"},
-          ]
+        ]
       }
     },
     methods: {

@@ -1,11 +1,15 @@
 <template>
   <div style="margin-top: 60px;text-align: center;">
 
+    <h1><a href="https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md">Android常用工具类</a></h1>
+
+    <hr/>
 
     <h1>时间戳</h1>
 
+
     <div>
-      <el-button @click="getNowTime" type="success" size="medium" >现在时间戳</el-button> &nbsp;&nbsp; ======>> &nbsp;&nbsp;
+      <el-button @click="getNowTime" type="success" size="medium">现在时间戳</el-button> &nbsp;&nbsp; ======>> &nbsp;&nbsp;
       <el-input v-model="now_time" placeholder="点击按钮生成时间戳" style="width: 180px;margin: 20px">你放好</el-input>
 
       <!--<p><el-input v-model="input" placeholder="请输入时间戳" style="margin: 0px">你放好</el-input></p>-->
@@ -23,6 +27,8 @@
       <el-button @click="getUnixTime" type="success" size="medium">转成Unix时间戳 >></el-button>
       <el-input v-model="unix_time_success" placeholder="将自动生成时间戳" style="width: 180px;margin: 20px">你放好</el-input>
     </div>
+
+    <hr/>
 
   </div>
 </template>
@@ -103,8 +109,7 @@
     }
   }
 
-  function timestampToTime(timestamp)
-  {
+  function timestampToTime(timestamp) {
     var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
     Y = date.getFullYear() + '-';
     M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
@@ -118,7 +123,7 @@
 
 <style>
   /*.el-input {*/
-    /*width: 180px;*/
-    /*margin: 20px;*/
+  /*width: 180px;*/
+  /*margin: 20px;*/
   /*}*/
 </style>
