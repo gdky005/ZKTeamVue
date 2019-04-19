@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/Index'
 import Home from '@/components/Home'
 import WXMoney from '@/components/WXMoney'
-import About from '@/components/About'
+import Git from '@/components/Git'
 
 Vue.use(Router)
 
@@ -29,9 +29,9 @@ export default new Router({
       component: WXMoney
     },
     {
-      path: '/About',
-      name: 'About',
-      component: About
+      path: '/Git',
+      name: 'Git',
+      component: Git
     }
 
   ]

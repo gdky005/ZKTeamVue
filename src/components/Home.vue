@@ -13,6 +13,12 @@
 
     <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
 
+    <p>
+      <router-link to="Git"  arget="view_window">
+      <el-button size="mini" type="primary" round>Git基本操作指南</el-button></router-link></p>
+
+    <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
+
 
     <h1>时间戳</h1>
 
