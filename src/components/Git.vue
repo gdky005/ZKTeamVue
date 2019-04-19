@@ -1,16 +1,26 @@
 <template>
 
-  <dev>
+  <div>
     <h1>Git基本操作指南</h1>
 
-    <img src="../assets/git.png" width="100%">
-  </dev>
+    <p>
+      <viewer :images="images" style="height: 800px;">
+        <img :src="picUrl" height="100">
+      </viewer>
+    </p>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Git"
+  export default {
+    name: "Git",
+    data() {
+      return {
+        picUrl: require('../assets/git.png'),
+
+      }
     }
+  }
 </script>
 
 <style scoped>
