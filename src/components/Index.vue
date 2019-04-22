@@ -3,7 +3,7 @@
 
 
     <el-container style="height: 1000px;">
-      <el-aside width="300px">
+      <el-aside width="20%">
         <h1>卓客 Team</h1>
 
         <p><a href="http://zkteam.cc/#/About" target="view_window">
@@ -14,6 +14,14 @@
 
         <p><a href="http://zkteam.cc:9001/" target="view_window">
           <el-button size="mini" type="primary" round>进程管理服务</el-button>
+        </a></p>
+
+        <p><a href="http://rap2.gdky005.com" target="view_window">
+          <el-button size="mini" type="primary" round>Rap2 接口服务</el-button>
+        </a></p>
+
+        <p><a href="http://gdky005.com:8001" target="view_window">
+          <el-button size="mini" type="primary" round>rap2-delos 服务首页地址</el-button>
         </a></p>
 
         <p><a href="http://zkteam.cc:8081" target="view_window">
