@@ -2,7 +2,7 @@
   <div style="margin-top: 60px;text-align: center;">
 
 
-    <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
+    <hrLine/>
 
     <h1>Android</h1>
 
@@ -11,10 +11,19 @@
     </a></p>
 
 
-    <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
+    <hrLine/>
+
+    <h1>开发常用在线工具</h1>
+
+    <p><a href="https://tool.lu" target="view_window">
+      <el-button size="mini" type="primary" round>在线工具</el-button>
+    </a></p>
 
 
-    <h1>时间戳</h1>
+    <hrLine/>
+
+
+    <h1 class="hr">时间戳</h1>
 
 
     <div>
@@ -37,7 +46,7 @@
       <el-input v-model="unix_time_success" placeholder="将自动生成时间戳" style="width: 180px;margin: 20px">你放好</el-input>
     </div>
 
-    <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 200px; margin-right: 200px"/>
+    <hrLine/>
 
   </div>
 </template>
@@ -131,6 +140,7 @@
 </script>
 
 <style>
+  /*@import "../assets/css/zkteam.css";*/
   /*.el-input {*/
   /*width: 180px;*/
   /*margin: 20px;*/

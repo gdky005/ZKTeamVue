@@ -8,9 +8,15 @@
 export default {
   name: 'App'
 }
+
+Vue.component('hrLine', {
+  template: '<hr class="blueLine"/>'
+})
+
 </script>
 
 <style>
+  @import "./assets/css/zkteam.css";
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
