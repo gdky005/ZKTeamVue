@@ -12,6 +12,10 @@
 
         <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 50px; margin-right: 50px"/>
 
+        <p>
+          <router-link to="/AppDataPage"><el-button size="mini" type="primary" round>App 数据网址</el-button> </router-link>
+        </p>
+
         <p><a href="http://zkteam.cc:9001/" target="view_window">
           <el-button size="mini" type="primary" round>进程管理服务</el-button>
         </a></p>

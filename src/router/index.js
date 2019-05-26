@@ -4,6 +4,7 @@ import Index from '@/components/Index'
 import Home from '@/components/Home'
 import WXMoney from '@/components/WXMoney'
 import About from '@/components/About'
+import AppDataPage from '@/components/AppDataPage'
 
 Vue.use(Router)
 
@@ -20,6 +21,11 @@ export default new Router({
           path: '/Home',
           name: 'Home',
           component: Home
+        },
+        {
+          path: '/AppDataPage',
+          name: 'AppDataPage',
+          component: AppDataPage
         }
       ],
     },
