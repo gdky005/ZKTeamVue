@@ -64,6 +64,7 @@
       <ul>
         <li>推荐 app 下载地址， 直接搜索『影梭』或>者 『Shadowsocks』：
 
+          <p>1）<a href="http://zkteam.cc/android/shadowsocks/shadowsocks.apk">卓客 Team</a></p>
           <p>1）<a href="https://apkpure.com">https://apkpure.com</a></p>
           <p>2）<a href="https://www.apkmirror.com/">https://www.apkmirror.com/</a></p></li>
         <li>google play 地址：<a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks&amp;hl=zh-CN">https://play.google.com/store/apps/details?id=com.github.shadowsocks&amp;hl=zh-CN</a>

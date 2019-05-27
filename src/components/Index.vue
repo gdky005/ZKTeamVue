@@ -3,7 +3,7 @@
 
 
     <el-container style="height: 1000px;">
-      <el-aside width="300px">
+      <el-aside width="20%">
         <h1>google 服务空间</h1>
 
         <hr style="height:1px;border:none;border-top:1px dashed #0066CC; margin-left: 50px; margin-right: 50px"/>
