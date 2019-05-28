@@ -4,6 +4,15 @@
 
     <hrLine/>
 
+    <h1>程序员必备</h1>
+
+    <p><a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md" target="view_window">
+      <el-button size="mini" type="primary" round>命令行的艺术</el-button>
+    </a></p>
+
+
+    <hrLine/>
+
     <h1>Android</h1>
 
     <p><a href="https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md" target="view_window">
