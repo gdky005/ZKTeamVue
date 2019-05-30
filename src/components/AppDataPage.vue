@@ -6,6 +6,14 @@
 
     <h1>App 数据网址</h1>
 
+    <p><a href="http://www.zkteam.cc/wq.html" target="view_window">
+      <el-button size="mini" type="primary" round>临时记录网址数据</el-button>
+    </a></p>
+
+    <p><a href="http://www.zkteam.cc/wq2.html" target="view_window">
+      <el-button size="mini" type="primary" round>SCP 上传/下载测试命令</el-button>
+    </a></p>
+
     <p><a href="https://mobile.umeng.com/platform/5ce947420cafb23dee000572/reports/realtime_summary" target="view_window">
       <el-button size="mini" type="primary" round>友盟统计</el-button>
     </a></p>
