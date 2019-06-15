@@ -1,47 +1,76 @@
 <template>
   <div style="margin-top: 60px;text-align: center;">
 
-
     <hrLine/>
+    <el-row>
+      <el-col :span="12" >
+        <h1>App 数据网址</h1>
 
-    <h1>App 数据网址</h1>
+        <p><a href="http://www.zkteam.cc/wq.html" target="view_window">
+          <el-button size="mini" type="primary" round>临时记录网址数据</el-button>
+        </a></p>
 
-    <p><a href="http://www.zkteam.cc/wq.html" target="view_window">
-      <el-button size="mini" type="primary" round>临时记录网址数据</el-button>
-    </a></p>
+        <p><a href="http://www.zkteam.cc/wq2.html" target="view_window">
+          <el-button size="mini" type="primary" round>SCP 上传/下载测试命令</el-button>
+        </a></p>
 
-    <p><a href="http://www.zkteam.cc/wq2.html" target="view_window">
-      <el-button size="mini" type="primary" round>SCP 上传/下载测试命令</el-button>
-    </a></p>
-
-    <p><a href="https://mobile.umeng.com/platform/5ce947420cafb23dee000572/reports/realtime_summary" target="view_window">
-      <el-button size="mini" type="primary" round>友盟统计</el-button>
-    </a></p>
-
-
-    <p><a href="https://report.tingyun.com/mobile/mobileApp/37521/overview" target="view_window">
-      <el-button size="mini" type="primary" round>听云</el-button>
-    </a></p>
+        <p><a href="https://mobile.umeng.com/platform/5ce947420cafb23dee000572/reports/realtime_summary"
+              target="view_window">
+          <el-button size="mini" type="primary" round>友盟统计</el-button>
+        </a></p>
 
 
-    <p><a href="https://fir.im/1h26" target="view_window">
-      <el-button size="mini" type="primary" round>Fir 内测地址</el-button>
-    </a></p>
+        <p><a href="https://report.tingyun.com/mobile/mobileApp/37521/overview" target="view_window">
+          <el-button size="mini" type="primary" round>听云</el-button>
+        </a></p>
 
 
-    <p><a href="https://play.google.com/apps/publish/?account=5586012382007160330#AppDashboardPlace:p=cc.zkteam.juediqiusheng&appid=4973272407116657596" target="view_window">
-      <el-button size="mini" type="primary" round>GooglePlay Console</el-button>
-    </a></p>
+        <p><a href="https://fir.im/1h26" target="view_window">
+          <el-button size="mini" type="primary" round>Fir 内测地址</el-button>
+        </a></p>
 
 
-    <p><a href="https://play.google.com/store/apps/details?id=cc.zkteam.juediqiusheng" target="view_window">
-      <el-button size="mini" type="primary" round>GooglePlay 地址</el-button>
-    </a></p>
+        <p><a href="https://play.google.com/apps/publish/?account=5586012382007160330#AppListPlace"
+              target="view_window">
+          <el-button size="mini" type="primary" round>GooglePlay Console</el-button>
+        </a></p>
 
 
-    <p><a href="https://apps.admob.com/v2/home" target="view_window">
-      <el-button size="mini" type="primary" round>Google Admob</el-button>
-    </a></p>
+        <p><a href="https://play.google.com/store/apps/details?id=com.zkteam.juediqiusheng" target="view_window">
+          <el-button size="mini" type="primary" round>GooglePlay 地址</el-button>
+        </a></p>
+      </el-col>
+
+      <el-col :span="12">
+        <h1>App 平台</h1>
+
+
+        <p>
+          <a href="https://apps.admob.com/v2/home" target="view_window">
+            <el-button size="mini" type="primary" round>Google Admob</el-button>
+          </a>
+        </p>
+
+        <p>
+          <a href="http://adnet.qq.com/index" target="view_window">
+            <el-button size="mini" type="primary" round>腾讯：优量汇</el-button>
+          </a>
+        </p>
+
+        <p>
+          <a href="https://ad.toutiao.com/union/media/union/" target="view_window">
+            <el-button size="mini" type="primary" round>头条：穿山甲</el-button>
+          </a>
+        </p>
+
+        <p>
+          <a href="https://mssp.baidu.com/bqt/modules.html" target="view_window">
+            <el-button size="mini" type="primary" round>百度：百青藤</el-button>
+          </a>
+        </p>
+      </el-col>
+    </el-row>
+
 
     <hrLine/>
 
