@@ -40,7 +40,7 @@
           return true
         }
 
-        var saveUrl = "http://zkteam.cc:8081/saveGradleVersionFile"
+        var saveUrl = "http://node.zkteam.cc/saveGradleVersionFile"
         let that = this;
         this.$fly.post(saveUrl, value)
           .then(function (response) {
