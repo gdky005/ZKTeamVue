@@ -4,7 +4,7 @@
 
     <p><el-button @click="versionData"  size="mini" type="primary">获取 Version.gradle 数据</el-button></p>
 
-    <mavon-editor v-model="value" style="height: 800px" @save="save(value)"></mavon-editor>
+    <mavon-editor v-model="value" style="height: 1200px" @save="save(value)"></mavon-editor>
   </div>
 
 </template>
@@ -29,7 +29,33 @@
           });
       },
       save(value) {
-        console.log(value);
+        console.log("保存数据为：" + value);
+
+        if(typeof value == "undefined" || value == null || value == ""){
+          console.log("数据为空");
+          this.$notify.error({
+            title: '错误',
+            message: '请先获取数据'
+          });
+          return true
+        }
+
+        var saveUrl = "http://zkteam.cc:8081/saveGradleVersionFile"
+        let that = this;
+        this.$fly.post(saveUrl, value)
+          .then(function (response) {
+            let content = response.data;
+            console.log(content);
+
+            that.$notify({
+              title: '保存成功',
+              message: '保存数据成功，可以在 app 直接访问',
+              type: 'success'
+            });
+
+          }).catch(function (error) {
+          console.log(error);
+        });
       }
     }
 
