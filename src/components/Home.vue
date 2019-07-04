@@ -2,9 +2,6 @@
   <div style="margin-top: 60px;text-align: center;">
 
 
-    <p>
-      <router-link to="/MarkDown"><el-button size="mini" type="primary" round>MarkDown</el-button> </router-link>
-    </p>
 
 
     <hrLine/>

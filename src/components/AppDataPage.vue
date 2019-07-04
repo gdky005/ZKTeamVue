@@ -14,6 +14,11 @@
           <el-button size="mini" type="primary" round>SCP 上传/下载测试命令</el-button>
         </a></p>
 
+
+        <p>
+          <router-link to="/MarkDown"><el-button size="mini" type="primary" round> Versions MarkDown </el-button> </router-link>
+        </p>
+
         <p><a href="https://mobile.umeng.com/platform/5ce947420cafb23dee000572/reports/realtime_summary"
               target="view_window">
           <el-button size="mini" type="primary" round>友盟统计</el-button>
