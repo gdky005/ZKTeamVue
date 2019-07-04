@@ -45,3 +45,11 @@ https://www.jb51.net/article/142844.htm
 
 ### fly 网络层
 https://github.com/wendux/fly
+
+### 添加 readme 的插件
+
+```
+npm install mavon-editor --save
+```
+
+源码地址：https://github.com/hinesboy/mavonEditor

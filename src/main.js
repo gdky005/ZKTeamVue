@@ -13,8 +13,13 @@ import Vuex from 'vuex';
 // 引入 axios
 import axios from 'axios';
 
+// 添加 markdown
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+
 Vue.use(ElementUI);
 Vue.use(Vuex);
+Vue.use(mavonEditor);
 Vue.config.productionTip = false;
 
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';

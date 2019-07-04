@@ -5,8 +5,9 @@ import Home from '@/components/Home'
 import WXMoney from '@/components/WXMoney'
 import About from '@/components/About'
 import AppDataPage from '@/components/AppDataPage'
+import MarkDown from '@/components/MarkDown'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   // mode: 'history',
@@ -38,6 +39,11 @@ export default new Router({
       path: '/About',
       name: 'About',
       component: About
+    },
+    {
+      path: '/MarkDown',
+      name: 'MarkDown',
+      component: MarkDown
     }
 
   ]
