@@ -19,7 +19,8 @@
       versionData() {
         console.log("开始请求数据");
         let that = this;
-        this.$fly.get('http://zkteam.cc/android/gradle/versions_1.gradle')
+        var nowTime = new Date().getTime();
+        this.$fly.get('http://zkteam.cc/android/gradle/versions_1.gradle?' + nowTime)
           .then(function (response) {
             let content = response.data;
             console.log(content);
