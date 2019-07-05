@@ -21,6 +21,10 @@
       <el-button size="mini" type="primary" round>Android 常用工具类查询</el-button>
     </a></p>
 
+  <p><a href="http://ju.outofmemory.cn/entry/343873" target="view_window">
+      <el-button size="mini" type="primary" round>Gradle依赖排除</el-button>
+    </a></p>
+
 
     <hrLine/>
 
