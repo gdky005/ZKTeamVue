@@ -15,6 +15,10 @@
     data() {
       return {value: ''}
     },
+    created() {
+      console.log("加载数据了哦！");
+      this.versionData();
+    },
     methods: {
       versionData() {
         console.log("开始请求数据");
@@ -58,7 +62,7 @@
           console.log(error);
         });
       }
-    }
+    },
 
   }
 
