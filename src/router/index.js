@@ -6,6 +6,7 @@ import WXMoney from '@/components/WXMoney'
 import About from '@/components/About'
 import AppDataPage from '@/components/AppDataPage'
 import MarkDown from '@/components/MarkDown'
+import MarkDownForWQData from '@/components/MarkDownForWQData'
 
 Vue.use(Router);
 
@@ -44,6 +45,11 @@ export default new Router({
       path: '/MarkDown',
       name: 'MarkDown',
       component: MarkDown
+    },
+    {
+      path: '/MarkDownForWQData',
+      name: 'MarkDownForWQData',
+      component: MarkDownForWQData
     }
 
   ]

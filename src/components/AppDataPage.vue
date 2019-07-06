@@ -19,6 +19,10 @@
           <router-link to="/MarkDown"><el-button size="mini" type="primary" round> Versions MarkDown </el-button> </router-link>
         </p>
 
+        <p>
+          <router-link to="/MarkDownForWQData"><el-button size="mini" type="primary" round> WQData MarkDown </el-button> </router-link>
+        </p>
+
         <p><a href="https://mobile.umeng.com/platform/5ce947420cafb23dee000572/reports/realtime_summary"
               target="view_window">
           <el-button size="mini" type="primary" round>友盟统计</el-button>
