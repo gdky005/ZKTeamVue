@@ -24,7 +24,7 @@
         console.log("开始请求数据");
         let that = this;
         var nowTime = new Date().getTime();
-        this.$fly.get('http://www.zkteam.cc/Markdown/data.md?' + nowTime)
+        this.$fly.get('http://zkteam.cc/Markdown/data.md?' + nowTime)
           .then(function (response) {
             let content = response.data;
             console.log(content);
