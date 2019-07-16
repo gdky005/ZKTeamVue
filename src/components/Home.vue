@@ -17,7 +17,7 @@
 
     <h1>Android</h1>
 
-    <p><a href="https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md" target="view_window">
+    <p><a href="https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md" target="view_window">
       <el-button size="mini" type="primary" round>Android 常用工具类查询</el-button>
     </a></p>
 
