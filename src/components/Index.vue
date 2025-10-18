@@ -33,26 +33,22 @@
 
             <div class="nav-section">
               <h4 class="nav-title">开发工具</h4>
-              <router-link to="/AppDataPage" class="nav-item">
-                <i class="el-icon-data-analysis"></i>
-                <span>App 数据网址</span>
-              </router-link>
               <a href="http://47.97.110.198:9001" target="_blank" class="nav-item">
                 <i class="el-icon-cpu"></i>
                 <span>进程管理服务</span>
               </a>
-              <a href="http://rap2.gdky005.com" target="_blank" class="nav-item">
-                <i class="el-icon-connection"></i>
-                <span>Rap2 接口服务</span>
-              </a>
-              <a href="http://gdky005.com:8001" target="_blank" class="nav-item">
-                <i class="el-icon-service"></i>
-                <span>rap2-delos 服务</span>
+              <a href="http://47.97.110.198:19999" target="_blank" class="nav-item">
+                <i class="el-icon-cpu"></i>
+                <span>内存监控服务</span>
               </a>
               <a href="http://zkteam.cc:8081" target="_blank" class="nav-item">
                 <i class="el-icon-link"></i>
                 <span>NodeJS 代理服务</span>
               </a>
+              <router-link to="/AppDataPage" class="nav-item">
+                <i class="el-icon-data-analysis"></i>
+                <span>App 数据网址</span>
+              </router-link>
             </div>
 
             <div class="nav-section">
