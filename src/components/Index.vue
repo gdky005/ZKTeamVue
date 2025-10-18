@@ -37,7 +37,7 @@
                 <i class="el-icon-data-analysis"></i>
                 <span>App 数据网址</span>
               </router-link>
-              <a href="http://zkteam.cc:9001/" target="_blank" class="nav-item">
+              <a href="http://47.97.110.198:9001" target="_blank" class="nav-item">
                 <i class="el-icon-cpu"></i>
                 <span>进程管理服务</span>
               </a>
